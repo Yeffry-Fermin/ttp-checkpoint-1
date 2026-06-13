@@ -12,27 +12,39 @@
   TASK A
   Using the body TAG selector, set a background color on the page.
 */
-
+body {
+  background-color: aquamarine;
+}
 
 /*
   TASK B
   Using the h1 TAG selector, set a font size and a color.
 */
-
+h1 {
+  font-size: 1.2rem;
+  color: #555;
+}
 
 /*
   TASK C
   Using the CLASS selector, style the list items with the highlight class.
   Give them a background color and some padding so they stand out.
 */
-
+.highlight {
+  background-color: #555;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
 
 /*
   TASK D
   Using the ID selector, give the h2 with the id section-title a color that is
   different from the h1 and different from body text.
 */
-
+#section-title {
+  color: brown;
+}
 
 /*
   TASK E
@@ -47,9 +59,15 @@
            Write your answer as a comment below this rule.
 
 
-           answer:
+           answer: Padding is the space between contents of the elements and the border. Margin is the space between the element border relative to the elements surroundings.
 */
-
+#box {
+  width: 300px;
+  height: 75px;
+  border: 1px solid #555;
+  padding: 1rem;
+  margin: 1rem;
+}
 
 /*
   TASK F
@@ -58,7 +76,18 @@
   and a cursor: pointer that turns into a pointer when the user hovers over it.
 */
 
-
+#click-me {
+  border: none;
+  background-color: #555;
+  padding: 0.75rem 1.2rem;
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#click-me:hover {
+  background-color: #999;
+  transition: background-color ease-out 0.5s;
+}
 /*
   TASK G — Specificity
   Write two rules that BOTH set the color of the paragraph with the id intro
@@ -72,5 +101,12 @@
            What is CSS specificity and how does it determine which rule wins?
            Write your answer as a comment below these two rules.
 
-           answer:
+           answer: The #intro won. The reason being being its higher on the specificity scale. How it determines this is through a ranking
+           element selections such as p, body, h1 are on the low end ---> then higher are class selectors ---> and even higher are id selections.
 */
+p {
+  color: red;
+}
+#intro {
+  color: blueviolet;
+}
