@@ -17,18 +17,18 @@
   CHECKLIST
   ----------------------------------------------------------------
 
-  [ ] TASK 1 — Page structure
+  [DONE] TASK 1 — Page structure
       Write a complete, valid HTML5 page from scratch.
       It must have a document type declaration, an html element,
       a head with a title tag, and a body.
 
-  [ ] TASK 2 — Link the stylesheet
+  [DONE] TASK 2 — Link the stylesheet
       Inside the head, link look.css to this page.
 
       EXPLAIN (write your answer as a comment near your link tag):
         Why does the link to a stylesheet go in the head and not the body?
 
-  [ ] TASK 3 — Page content
+  [DONE] TASK 3 — Page content
       Add ALL of the following elements inside the body:
         - An h1 with the text "My Checkpoint Page"
         - A paragraph with at least two sentences — give it an id of "intro"
@@ -54,10 +54,38 @@
         Both rules target the same paragraph.
         Which color will the paragraph actually be? Why does one rule win?
 
-        Answer:
+        Answer: Color will be tomato because id has a higher specificity.
 
 -->
 
 <!-- ============================================================ -->
 <!-- Write your complete HTML page starting below this line      -->
 <!-- ============================================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="look.css">
+  <!-- A link tag goes in the head because html is read from top to down and it wouldn't make sense
+       to have your styles go after your html elements 
+  -->
+</head>
+<body>
+  <h1>My Checkpoint page</h1>
+  <p id="intro">This is my attempt at completing ttp-checkpoint-1. I'm confident my attept is mostly correct but you never know as its very easy to make mistakes.</p>
+  <h2 id="section-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, cum!</h2>
+  <ul>
+    <!-- An id is a attribute identifier of which you can only have 1. A class follows the same definition except you can have multiple class wihh the same name -->
+     <!-- Two elements on the same page can share the same class -->
+      <!-- Two elements on the same page cannot share the same id -->
+    <li class="highlight"></li>
+    <li class=""></li>
+    <li class="highlight"></li>
+    <li class=""></li>
+  </ul>
+  <div id="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, error!</div>
+  <button id="click-me">Click Me</button>
+</body>
+</html>
